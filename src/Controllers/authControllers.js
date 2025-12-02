@@ -63,7 +63,7 @@ export const logIn = async (req, res) => {
     });
   } catch (error) {
     console.log("Lỗi login");
-      return res.status(500).json({ message: "Lỗi server", error ,email: email, password: password});
+      return res.status(500).json({ message: "Lỗi server", error });
   }
 };
 
