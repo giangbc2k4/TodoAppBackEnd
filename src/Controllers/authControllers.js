@@ -61,11 +61,13 @@ export const logIn = async (req, res) => {
       displayName: user.displayName,
       email: user.email,
     });
-  } catch (error) {
-    console.log("Lỗi login");
-      return res.status(500).json({ message: "Lỗi server", error });
-  }
-};
+} catch (error) {
+  console.log("Lỗi login:", error);
+  return res.status(500).json({
+    message: "Lỗi server",
+    error: error.message
+  });
+}
 
 export const logOut = async (req, res) => {
   try {
