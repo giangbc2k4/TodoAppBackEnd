@@ -25,3 +25,4 @@ connectDB().then(() => {
     console.log("Server dang chay tren : http://localhost:5001/");
   });
 });
+export default app;
